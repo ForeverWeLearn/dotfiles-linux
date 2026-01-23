@@ -1,0 +1,16 @@
+* {
+    font-family: "JetBrainsMono NF", monospace !important;
+}
+
+.c38106a3f0c3ca76-bar {
+    display: none;
+}
+
+.theme-light,
+.theme-dark {
+    --custom-app-top-bar-height: 0px !important;
+}
+
+.ef3116c2da186559-tree {
+    padding-top: 18px;
+}
