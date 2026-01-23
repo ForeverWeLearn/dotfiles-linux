@@ -1,0 +1,4 @@
+[open]
+prepend_rules = [
+	{ url = "*.py", use = "edit" },
+]

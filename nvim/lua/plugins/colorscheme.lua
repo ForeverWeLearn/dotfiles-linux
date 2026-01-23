@@ -15,6 +15,10 @@ return {
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       transparent_background = true,
+      float = {
+        transparent = true,
+        solid = true,
+      },
       term_colors = true,
       integrations = {
         cmp = true,
