@@ -41,20 +41,23 @@ output "eDP-1" {
 }
 
 environment {
+    VISUAL "nvim"
+    EDITOR "nvim"
+
     DISPLAY ":1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
-    
+
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
-
-    XDG_SESSION_TYPE "wayland"
-    XDG_CURRENT_DESKTOP "niri"
 }
 
 debug {
-  honor-xdg-activation-with-invalid-serial
+    honor-xdg-activation-with-invalid-serial
 }
 
 layout {
@@ -158,12 +161,26 @@ window-rule {
 
 window-rule {
     match app-id="zen"
-    default-column-width { proportion 0.9; }
+    open-maximized true
 }
 
 window-rule {
     match app-id="yazi"
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.7; }
+}
+
+window-rule {
+    match app-id="yazi-wrapper"
+    open-floating true
+    min-width 1350
+    max-width 1350
+    min-height 850
+    max-height 850
+}
+
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    default-column-width { proportion 0.4; }
 }
 
 window-rule {
@@ -173,7 +190,7 @@ window-rule {
 
 window-rule {
     match app-id="code"
-    default-column-width { proportion 0.9; }
+    open-maximized true
 }
 
 window-rule {

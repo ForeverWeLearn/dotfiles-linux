@@ -1,4 +1,13 @@
-[open]
-prepend_rules = [
-	{ url = "*.py", use = "edit" },
-]
+[mgr]
+ratio = [3, 8, 9]
+sort_by = "extension"
+linemode = "size"
+show_hidden = false
+
+
+[preview]
+wrap = "yes"
+max_width = 3000
+max_height = 3000
+image_quality = 75
+image_delay = 0
