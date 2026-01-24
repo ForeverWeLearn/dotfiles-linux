@@ -1,0 +1,11 @@
+[config]
+
+
+[templates.niri]
+input_path = "~/.config/noctalia/templates/niri.kdl"
+output_path = "~/.config/niri/noctalia.kdl"
+
+
+[templates.test]
+input_path = "~/.config/noctalia/templates/test.css"
+output_path = "~/.config/niri/test.css"

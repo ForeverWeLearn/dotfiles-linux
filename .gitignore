@@ -19,6 +19,9 @@
 !lazygit/config.yml
 !niri/config.kdl
 !niri/keybinds.kdl
+!noctalia/templates/*
+!noctalia/settings.json
+!noctalia/user-templates.toml
 !nvim/**/*
 !nwg-look/config
 !qView/qView.conf
