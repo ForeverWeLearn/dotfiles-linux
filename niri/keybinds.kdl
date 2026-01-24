@@ -9,7 +9,8 @@ binds {
     // Apps ===================================================================
     Mod+Escape                          repeat=false { spawn-sh "kitty --class btop -e btop"; } // System Monitor
     Mod+Return                          repeat=false { spawn "kitty"; } // Terminal
-    Mod+B                               repeat=false { spawn "zen-browser"; } // Browser
+    Mod+B                               repeat=false { spawn "zen-browser"; } // Zen Browser
+    Mod+Shift+B                         repeat=false { spawn "chromium"; } // Chromium Browser
     Mod+D                               repeat=false { spawn "vesktop"; } // Discord
     Mod+C                               repeat=false { spawn "code"; } // Code Editor
     Mod+Shift+C                         repeat=false { spawn-sh "kitty --class nvim -e nvim"; } // Terminal Code Editor
@@ -107,14 +108,18 @@ binds {
     Mod+Shift+L                         repeat=false { move-column-right; }
     Mod+Shift+K                         repeat=false { move-column-to-workspace-up; }
     Mod+Shift+J                         repeat=false { move-column-to-workspace-down; }
-    Mod+Ctrl+H                          { move-column-left; }
-    Mod+Ctrl+L                          { move-column-right; }
-    Mod+Ctrl+K                          { move-window-up; }
-    Mod+Ctrl+J                          { move-window-down; }
     Mod+Shift+Left                      repeat=false { move-column-left; }
     Mod+Shift+Right                     repeat=false { move-column-right; }
     Mod+Shift+Up                        repeat=false { move-column-to-workspace-up; }
     Mod+Shift+Down                      repeat=false { move-column-to-workspace-down; }
+    Mod+Ctrl+H                          { move-column-left; }
+    Mod+Ctrl+L                          { move-column-right; }
+    Mod+Ctrl+K                          { move-window-up; }
+    Mod+Ctrl+J                          { move-window-down; }
+    Mod+Ctrl+Left                       { move-column-left; }
+    Mod+Ctrl+Right                      { move-column-right; }
+    Mod+Ctrl+Up                         { move-window-up; }
+    Mod+Ctrl+Down                       { move-window-down; }
     // ========================================================================
 
 
