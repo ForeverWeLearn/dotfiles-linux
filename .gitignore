@@ -19,7 +19,8 @@
 !kitty/current-theme.conf
 !kitty/kitty.conf
 !lazygit/config.yml
-!niri/*.kdl
+!niri/config.kdl
+!niri/keybinds.kdl
 !nvim/**/*
 !nwg-look/config
 !qView/qView.conf
