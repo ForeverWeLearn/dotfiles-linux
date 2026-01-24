@@ -227,5 +227,10 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="be.alexandervanhee.gradia"
+    open-maximized true
+}
+
 include "./noctalia.kdl"
 

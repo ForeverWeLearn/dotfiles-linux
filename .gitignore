@@ -15,9 +15,7 @@
 !fastfetch/config.jsonc
 !fish/config.fish
 !fontconfig/fonts.conf
-!gtk-3.0/gtk.css
 !gtk-3.0/settings.ini
-!gtk-4.0/gtk.css
 !kitty/themes/*.conf
 !kitty/current-theme.conf
 !kitty/kitty.conf

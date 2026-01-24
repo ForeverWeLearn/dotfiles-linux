@@ -2,7 +2,6 @@ require("full-border"):setup({
 	type = ui.Border.ROUNDED,
 })
 
--- require("no-status"):setup()
 
 Status:children_add(function(self)
 	local h = self._current.hovered

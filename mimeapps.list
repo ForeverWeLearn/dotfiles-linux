@@ -53,6 +53,7 @@ image/sgi=com.interversehq.qView.desktop
 image/x-tga=com.interversehq.qView.desktop
 image/x-xcf=com.interversehq.qView.desktop
 x-scheme-handler/discord=vesktop.desktop
+text/markdown=code.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
@@ -104,3 +105,4 @@ image/x-sgi-rgba=com.interversehq.qView.desktop;
 image/sgi=com.interversehq.qView.desktop;
 image/x-tga=com.interversehq.qView.desktop;
 image/x-xcf=com.interversehq.qView.desktop;
+text/markdown=code.desktop;
