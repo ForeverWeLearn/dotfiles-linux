@@ -15,8 +15,6 @@
 !fish/config.fish
 !fontconfig/fonts.conf
 !gtk-3.0/settings.ini
-!kitty/themes/*.conf
-!kitty/current-theme.conf
 !kitty/kitty.conf
 !lazygit/config.yml
 !niri/config.kdl
