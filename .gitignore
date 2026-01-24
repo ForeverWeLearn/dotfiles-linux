@@ -27,6 +27,7 @@
 !vesktop/settings/*
 !vesktop/themes/*.css
 !vlc/*
-!yazi/**/*
+!yazi/plugins/**/*
+!yazi/*
 !mimeapps.list
 !starship.toml
