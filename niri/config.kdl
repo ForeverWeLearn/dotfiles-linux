@@ -74,7 +74,7 @@ layout {
         proportion 0.75
     }
 
-    gaps 12
+    gaps 16
 
     struts {
         left 8
@@ -99,17 +99,17 @@ layout {
     }
 
     insert-hint {
-        on
-        color "#fab38770"
+        off
     }
 
     tab-indicator {
         hide-when-single-tab
         corner-radius 4
         width 4
-        length total-proportion=0.4
-        gap 4
-        gaps-between-tabs 3
+        position "top"
+        length total-proportion=0.95
+        gap 3
+        gaps-between-tabs 0
     }
 }
 
@@ -161,6 +161,11 @@ window-rule {
 
 window-rule {
     match app-id="zen"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="chromium"
     open-maximized true
 }
 
