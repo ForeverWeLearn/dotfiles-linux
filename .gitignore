@@ -10,7 +10,6 @@
 !bat/config
 !btop/themes/*.theme
 !btop/btop.conf
-!cava/themes/noctalia
 !cava/config
 !fastfetch/config.jsonc
 !fish/config.fish
