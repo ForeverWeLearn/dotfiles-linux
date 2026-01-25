@@ -40,6 +40,12 @@ run = "cd ~/.local/share/Trash/files"
 desc = "Go to Trash"
 
 
+[[mgr.append_keymap]]
+on = ["g", "m"]
+run = "cd /mnt"
+desc = "Go /mnt"
+
+
 [[mgr.prepend_keymap]]
 on = ["<C-h>"]
 run = "hidden toggle"

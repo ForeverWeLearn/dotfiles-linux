@@ -15,10 +15,3 @@ layout {
         color "{{colors.primary.default.hex}}80"
     }
 }
-
-recent-windows {
-    highlight {
-        active-color "{{colors.primary.default.hex}}"
-        urgent-color "{{colors.error.default.hex}}"
-    }
-}

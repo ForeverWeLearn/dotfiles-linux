@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MSG="Cachy!"
+MSG="${1:-Cachy!}"
 FONT_DIR="/usr/share/figlet/"
 
 for font in "$FONT_DIR"*.flf; do

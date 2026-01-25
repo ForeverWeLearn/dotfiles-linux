@@ -9,6 +9,8 @@ binds {
     // Apps ===================================================================
     Mod+Escape                          repeat=false { spawn-sh "kitty --class btop -e btop"; } // System Monitor
     Mod+Return                          repeat=false { spawn "kitty"; } // Terminal
+    Mod+Shift+Return                    repeat=false { spawn-sh "kitty --class luckycard -e card.sh"; } // Card
+    
     Mod+B                               repeat=false { spawn "zen-browser"; } // Zen Browser
     Mod+Shift+B                         repeat=false { spawn "chromium"; } // Chromium Browser
     Mod+D                               repeat=false { spawn "vesktop"; } // Discord

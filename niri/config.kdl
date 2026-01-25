@@ -17,6 +17,10 @@ overview {
     backdrop-color "#151515"
 }
 
+recent-windows {
+    off
+}
+
 cursor {
     hide-when-typing 
     hide-after-inactive-ms 500
@@ -25,6 +29,8 @@ cursor {
 }
 
 input {
+    focus-follows-mouse max-scroll-amount="0%"
+
     touchpad {
         tap
         natural-scroll
@@ -109,7 +115,7 @@ layout {
         position "top"
         length total-proportion=0.95
         gap 3
-        gaps-between-tabs 0
+        gaps-between-tabs 3
     }
 }
 
@@ -194,6 +200,15 @@ window-rule {
 }
 
 window-rule {
+    match app-id="luckycard"
+    open-floating true
+    min-width 346
+    max-width 346
+    min-height 534
+    max-height 534
+}
+
+window-rule {
     match app-id="code"
     open-maximized true
 }
@@ -228,6 +243,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="obsidian"
+    default-column-width { proportion 0.75; }
+}
+
+window-rule {
     match app-id="org.gnome.Calculator"
     open-floating true
 }
@@ -236,6 +256,8 @@ window-rule {
     match app-id="be.alexandervanhee.gradia"
     open-maximized true
 }
+
+include "./animations.kdl"
 
 include "./noctalia.kdl"
 
