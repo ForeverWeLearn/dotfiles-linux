@@ -11,8 +11,8 @@ binds {
     Mod+Return                          repeat=false { spawn "kitty"; } // Terminal
     Mod+Shift+Return                    repeat=false { spawn-sh "kitty --class luckycard -e card.sh"; } // Card
     
-    Mod+B                               repeat=false { spawn "zen-browser"; } // Zen Browser
-    Mod+Shift+B                         repeat=false { spawn "chromium"; } // Chromium Browser
+    Mod+G                               repeat=false { spawn "zen-browser"; } // Zen Browser
+    Mod+Shift+G                         repeat=false { spawn "chromium"; } // Chromium Browser
     Mod+D                               repeat=false { spawn "vesktop"; } // Discord
     Mod+C                               repeat=false { spawn "code"; } // Code Editor
     Mod+Shift+C                         repeat=false { spawn-sh "kitty --class nvim -e nvim"; } // Terminal Code Editor
@@ -29,6 +29,7 @@ binds {
     Mod+V                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; } // Clipboard History
     Mod+Slash                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; } // Emoji Picker
     Mod+W                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; } // Network Panel
+    Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; } // Battery Panel
     Mod+F4                              repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; } // Session Menu
     Mod+P                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; } // Lock Screen
     Mod+S                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; } // Night Light
