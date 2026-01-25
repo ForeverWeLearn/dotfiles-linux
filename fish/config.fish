@@ -13,7 +13,7 @@ function fish_greeting
         set -l random_font (basename (random choice $fonts) .flf)
         toilet -f $random_font Hello -F rainbow
     else if test $roll -le 80
-        fortune -s | cowsay | lolcat -p 10
+        fortune -s | cowsay -r | lolcat -p 10
     else
         fastfetch
     end

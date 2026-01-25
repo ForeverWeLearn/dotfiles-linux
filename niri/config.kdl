@@ -4,8 +4,10 @@ include "keybinds.kdl"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
-spawn-sh-at-startup "qs -c noctalia-shell &"
+
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+spawn-sh-at-startup "qs -c noctalia-shell &"
+spawn-sh-at-startup "fcitx5 -d"
 
 
 hotkey-overlay {
@@ -75,9 +77,9 @@ layout {
     default-column-width { proportion 0.5; }
 
     preset-column-widths {
-        proportion 0.333
+        proportion 0.33333
         proportion 0.5
-        proportion 0.75
+        proportion 0.66666
     }
 
     gaps 16
@@ -230,13 +232,6 @@ window-rule {
 
 window-rule {
     match app-id="vlc"
-    open-floating true
-    max-width 1280
-    max-height 720
-}
-
-window-rule {
-    match app-id="com.interversehq.qView"
     open-floating true
     max-width 1280
     max-height 720
