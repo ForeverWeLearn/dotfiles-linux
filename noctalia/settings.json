@@ -54,14 +54,18 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": true,
+                    "emptyColor": "secondary",
                     "enableScrollWheel": true,
+                    "focusedColor": "primary",
                     "followFocusedScreen": false,
                     "groupedBorderOpacity": 0,
                     "hideUnoccupied": false,
                     "iconScale": 0.75,
                     "id": "Workspace",
                     "labelMode": "none",
+                    "occupiedColor": "secondary",
                     "showApplications": false,
+                    "showBadge": true,
                     "showLabelsOnlyWhenOccupied": false,
                     "unfocusedIconsOpacity": 0.7000000000000001
                 }
@@ -99,16 +103,6 @@
                 {
                     "displayMode": "onhover",
                     "id": "Network"
-                },
-                {
-                    "deviceNativePath": "BAT0",
-                    "displayMode": "alwaysHide",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false,
-                    "warningThreshold": 30
                 }
             ]
         }
@@ -140,7 +134,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Dracula",
+        "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -225,6 +219,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 0.35000000000000003,
+        "autoStartAuth": false,
         "avatarImage": "/home/fowel/Pictures/Personal/catppuccin.png",
         "boxRadiusRatio": 1,
         "compactLockScreen": true,
@@ -307,7 +302,7 @@
         "saveToHistory": {
             "critical": true,
             "low": false,
-            "normal": false
+            "normal": true
         },
         "sounds": {
             "criticalSoundFile": "",

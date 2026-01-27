@@ -19,6 +19,7 @@
 !lazygit/config.yml
 !niri/config.kdl
 !niri/keybinds.kdl
+!niri/animations.kdl
 !noctalia/templates/*
 !noctalia/settings.json
 !noctalia/user-templates.toml
