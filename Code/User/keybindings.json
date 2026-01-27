@@ -1,0 +1,29 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "alt+/",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.toggleStatusbarVisibility",
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.quickOpenTerm",
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "biati.excludedfiles.toggle",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active",
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active",
+  },
+]

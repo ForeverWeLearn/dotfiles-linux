@@ -11,6 +11,7 @@
 !btop/themes/*.theme
 !btop/btop.conf
 !cava/config
+!Code/User/*.json
 !fastfetch/config.jsonc
 !fish/config.fish
 !fontconfig/fonts.conf
