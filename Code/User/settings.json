@@ -22,8 +22,6 @@
   "color-picker-universal.languages": ["*", "!css", "!less", "!scss", "!sass"],
   "css.lint.emptyRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
-  "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
-  "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit",
     "source.organizeImports.biome": "explicit",
@@ -82,7 +80,7 @@
   "workbench.editor.showTabs": "single",
   "workbench.editor.tabSizing": "fixed",
   "workbench.editor.tabSizingFixedMinWidth": 200,
-  "workbench.iconTheme": "gruvbox-material-icons",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.layoutControl.enabled": false,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.startupEditor": "none",

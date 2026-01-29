@@ -16,7 +16,7 @@ TARGET_DIR="$BASE_DIR/$THEME"
 if [ ! -d "$TARGET_DIR" ]; then
     echo "[WARN] Directory $TARGET_DIR does not exist. Keep current wallpaper folder."
 else
-    ln -sfn "$TARGET_DIR" "$CURRENT_LINK"
+    ln -srfn "$TARGET_DIR" "$CURRENT_LINK"
 fi
 
 wallpaper.sh

@@ -10,7 +10,7 @@ BTOP_SETTINGS_PATH = os.path.expanduser("~/.config/btop/btop.conf")
 VSCODE_THEME_MAP = {
     "Catppuccin": "Catppuccin Macchiato",
     "Gruvbox": "Gruvbox Dark Medium",
-    "Dracula": "Dracula Theme",
+    "Dracula": "Dracula Refined",
     "Nord": "Nord",
     "Everforest": "Everforest Pro Dark",
     "Rose Pine": "Rosé Pine Moon",

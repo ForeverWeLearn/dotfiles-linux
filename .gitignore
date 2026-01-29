@@ -24,7 +24,10 @@
 !noctalia/templates/*
 !noctalia/settings.json
 !noctalia/user-templates.toml
-!nvim/**/*
+!nvim/lua/**/*
+!nvim/lazyvim.json
+!nvim/init.lua
+!nvim/stylua.toml
 !nwg-look/config
 !qView/qView.conf
 !scripts/**/*
