@@ -8,7 +8,7 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": false,
         "enableClipboardHistory": true,
-        "enableSettingsSearch": true,
+        "enableSettingsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "pinnedApps": [
@@ -140,7 +140,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Gruvbox",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
