@@ -1,0 +1,10 @@
+.nautilus-window .navigation-sidebar > .sidebar-row:nth-child(2),
+.nautilus-window .navigation-sidebar > .sidebar-row:nth-child(3),
+.nautilus-window .navigation-sidebar > .sidebar-row:nth-child(4) {
+  min-height:0;
+  font-size: 0;
+  -gtk-icon-size: 0;
+  margin-top: -2px;
+}
+
+@import url("noctalia.css");

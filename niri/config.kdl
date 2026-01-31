@@ -26,7 +26,7 @@ recent-windows {
 cursor {
     hide-when-typing 
     hide-after-inactive-ms 500
-    xcursor-theme "capitaine-cursors"
+    xcursor-theme "Vimix-cursors"
     xcursor-size 32
 }
 

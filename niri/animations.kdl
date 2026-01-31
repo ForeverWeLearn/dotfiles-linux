@@ -1,6 +1,6 @@
 animations {
     window-open {
-        duration-ms 500
+        duration-ms 400
         curve "ease-out-cubic"
         custom-shader "vec4 fall_from_top(vec3 coords_geo, vec3 size_geo) {
             float progress = niri_clamped_progress * niri_clamped_progress;

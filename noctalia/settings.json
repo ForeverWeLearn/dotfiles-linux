@@ -1,6 +1,8 @@
 {
     "appLauncher": {
         "autoPasteClipboard": true,
+        "clipboardWatchImageCommand": "wl-paste --type image --watch cliphist store",
+        "clipboardWatchTextCommand": "wl-paste --type text --watch cliphist store",
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
@@ -17,7 +19,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
-        "useApp2Unit": true,
+        "useApp2Unit": false,
         "viewMode": "list"
     },
     "audio": {
@@ -32,10 +34,13 @@
     },
     "bar": {
         "backgroundOpacity": 1,
+        "barType": "simple",
         "capsuleOpacity": 0.5,
         "density": "spacious",
         "exclusive": true,
         "floating": false,
+        "frameRadius": 12,
+        "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 12,
         "marginVertical": 12,
@@ -54,7 +59,7 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": true,
-                    "emptyColor": "secondary",
+                    "emptyColor": "primary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
                     "followFocusedScreen": false,
@@ -63,7 +68,8 @@
                     "iconScale": 0.75,
                     "id": "Workspace",
                     "labelMode": "none",
-                    "occupiedColor": "secondary",
+                    "occupiedColor": "primary",
+                    "reverseScroll": false,
                     "showApplications": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": false,
@@ -72,11 +78,11 @@
             ],
             "left": [
                 {
-                    "customFont": "Noto Sans Mono Black",
+                    "customFont": "JetBrains Mono ExtraBold",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "tooltipFormat": "HH:mm ddd dd MMM yyyy",
                     "useCustomFont": true,
                     "usePrimaryColor": false
                 },
@@ -217,13 +223,14 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
+        "allowPasswordWithFprintd": false,
         "animationDisabled": false,
         "animationSpeed": 0.35000000000000003,
         "autoStartAuth": false,
         "avatarImage": "/home/fowel/Pictures/Personal/catppuccin.png",
         "boxRadiusRatio": 1,
         "compactLockScreen": true,
-        "dimmerOpacity": 0.85,
+        "dimmerOpacity": 0,
         "enableLockScreenCountdown": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
@@ -379,7 +386,7 @@
         "showHeader": false,
         "showNumberLabels": true
     },
-    "settingsVersion": 44,
+    "settingsVersion": 46,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
