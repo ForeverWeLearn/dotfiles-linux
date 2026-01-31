@@ -8,7 +8,7 @@ VSCODE_SETTINGS_PATH = os.path.expanduser("~/.config/Code/User/settings.json")
 BTOP_SETTINGS_PATH = os.path.expanduser("~/.config/btop/btop.conf")
 
 VSCODE_THEME_MAP = {
-    "Catppuccin": "Catppuccin Macchiato",
+    "Catppuccin": "Catppuccin Mocha",
     "Gruvbox": "Gruvbox Dark Medium",
     "Dracula": "Dracula Refined",
     "Nord": "Nord",

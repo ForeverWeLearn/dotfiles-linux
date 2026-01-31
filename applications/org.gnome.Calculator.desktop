@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Calculator
+Comment=Utility
+Keywords=calculation;arithmetic;scientific;financial;
+Exec=gnome-calculator
+Icon=org.gnome.Calculator
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;Calculator;
+X-Purism-FormFactor=Workstation;Mobile;

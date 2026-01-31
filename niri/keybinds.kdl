@@ -17,7 +17,9 @@ binds {
     Mod+C                               repeat=false { spawn "code"; } // Code Editor
     Mod+Shift+C                         repeat=false { spawn-sh "kitty --class nvim -e nvim"; } // Terminal Code Editor
     Mod+E                               repeat=false { spawn "nautilus"; } // File Manager
+    Mod+Shift+E                         repeat=false { spawn-sh "nautilus admin:///"; } // File Manager as root
     Mod+Y                               repeat=false { spawn-sh "kitty --class yazi -e yazi"; } // Terminal File Manager
+    Mod+Shift+Y                         repeat=false { spawn-sh "kitty --class yazi -e sudo -E yazi"; } // Terminal File Manager as root
     // ========================================================================
 
 

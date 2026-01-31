@@ -4,19 +4,22 @@
 
 !**/.gitignore
 
-!arch-update/arch-update.conf
-!autostart/*.desktop
+!applications/*.desktop
 !bat/themes/*.tmTheme
 !bat/config
 !btop/themes/*.theme
 !btop/btop.conf
 !cava/config
-!Code/User/*.json
 !fastfetch/config.jsonc
+!fcitx5/conf/classicui.conf
+!fcitx5/config
+!fcitx5/profile
 !fish/config.fish
 !fontconfig/fonts.conf
 !kitty/kitty.conf
 !lazygit/config.yml
+!micro/colorschemes/*.micro
+!micro/settings.json
 !niri/config.kdl
 !niri/keybinds.kdl
 !niri/animations.kdl
@@ -28,7 +31,7 @@
 !nvim/init.lua
 !nvim/stylua.toml
 !nwg-look/config
-!qView/qView.conf
+!qimgv/qimgv.conf
 !scripts/**/*
 !vesktop/settings/*
 !vesktop/themes/*.css

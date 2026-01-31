@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Input Remapper
+Icon=input-remapper
+Exec=input-remapper-gtk
+Terminal=false
+Categories=Settings
+Comment=GUI for device specific key mappings
+NoDisplay=true
