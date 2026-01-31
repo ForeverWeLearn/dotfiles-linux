@@ -17,8 +17,8 @@ desc = "Enter directory or open file"
 
 
 [[mgr.prepend_keymap]]
-on   = "2"
-run  = "plugin smart-switch 1"
+on = "2"
+run = "plugin smart-switch 1"
 desc = "Switch or create tab 2"
 
 
@@ -28,6 +28,24 @@ run = "plugin toggle-pane min-preview"
 desc = "Toggle preview pane"
 
 
+[[mgr.prepend_keymap]]
+on = ["g", "f"]
+run = "noop"
+desc = "Disable"
+
+
+[[mgr.prepend_keymap]]
+on = ["g", "g"]
+run = "arrow top"
+desc = "Go to top"
+
+
+[[mgr.prepend_keymap]]
+on = ["g", "<Space>"]
+run = "cd --interactive"
+desc = "Jump interactive"
+
+
 [[mgr.append_keymap]]
 on = ["g", "p"]
 run = "cd ~/Pictures"
@@ -35,15 +53,15 @@ desc = "Go ~/Pictures"
 
 
 [[mgr.append_keymap]]
-on = ["g", "r"]
-run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
-desc = "Go to the root of Git repo"
+on = ["g", "l"]
+run = "cd ~/.local"
+desc = "Go ~/.local"
 
 
 [[mgr.append_keymap]]
-on = ["g", "t"]
-run = "cd ~/.local/share/Trash/files"
-desc = "Go to Trash"
+on = ["g", "s"]
+run = "cd /usr/share"
+desc = "Go /usr/share"
 
 
 [[mgr.append_keymap]]
@@ -53,9 +71,15 @@ desc = "Go /mnt"
 
 
 [[mgr.append_keymap]]
-on = ["g", "l"]
-run = "cd ~/.local"
-desc = "Go ~/.local"
+on = ["g", "r"]
+run = "cd /"
+desc = "Go to root"
+
+
+[[mgr.append_keymap]]
+on = ["g", "t"]
+run = "cd ~/.local/share/Trash/files"
+desc = "Go to trash"
 
 
 [[mgr.prepend_keymap]]
