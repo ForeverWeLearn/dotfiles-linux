@@ -36,6 +36,8 @@
 !vesktop/settings/*
 !vesktop/themes/*.css
 !vlc/*
+!xdg-desktop-portal/portals.conf
+!xdg-desktop-portal-termfilechooser/config
 !yazi/plugins/**/*
 !yazi/*
 !mimeapps.list

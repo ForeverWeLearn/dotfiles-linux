@@ -4,10 +4,10 @@ include "keybinds.kdl"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
-
-spawn-sh-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent &"
-spawn-sh-at-startup "qs -c noctalia-shell &"
+spawn-sh-at-startup "qs -c noctalia-shell"
 spawn-sh-at-startup "fcitx5 -d"
+spawn-sh-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
+spawn-sh-at-startup "/usr/lib/xdg-desktop-portal-termfilechooser -r"
 
 
 hotkey-overlay {
