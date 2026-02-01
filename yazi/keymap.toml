@@ -29,12 +29,6 @@ desc = "Toggle preview pane"
 
 
 [[mgr.prepend_keymap]]
-on = ["g", "f"]
-run = "noop"
-desc = "Disable"
-
-
-[[mgr.prepend_keymap]]
 on = ["g", "g"]
 run = "arrow top"
 desc = "Go to top"
@@ -44,6 +38,12 @@ desc = "Go to top"
 on = ["g", "<Space>"]
 run = "cd --interactive"
 desc = "Jump interactive"
+
+
+[[mgr.prepend_keymap]]
+on = ["g", "f"]
+run = "follow"
+desc = "Follow symlink"
 
 
 [[mgr.append_keymap]]

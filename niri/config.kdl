@@ -222,7 +222,7 @@ window-rule {
 
 window-rule {
     match app-id="nvim"
-    default-column-width { proportion 0.5; }
+    open-maximized true
 }
 
 window-rule {
