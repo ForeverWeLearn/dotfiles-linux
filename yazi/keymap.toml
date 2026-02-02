@@ -41,7 +41,7 @@ desc = "Switch or create tab 5"
 
 
 [[mgr.prepend_keymap]]
-on = "p"
+on = "<C-p>"
 run = "plugin toggle-pane min-preview"
 desc = "Toggle preview pane"
 
