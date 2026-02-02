@@ -9,8 +9,8 @@ include "./default/rules.kdl"
 include "./default/keybinds.kdl"
 include "./default/animations.kdl"
 
-include "./stationary-wallpaper.kdl"
-include "./page-animations.kdl"
+include "./custom/stationary-wallpaper.kdl"
+include "./custom/animations.kdl"
 
 include "./noctalia.kdl"
 

@@ -1,0 +1,46 @@
+animations {
+    overview-open-close {
+        duration-ms 400
+        curve "ease-out-expo"
+    }
+
+    horizontal-view-movement {
+        duration-ms 450
+        curve "ease-out-expo"
+    }
+
+    workspace-switch {
+        duration-ms 450
+        curve "ease-out-expo"
+    }
+
+    window-open {
+        duration-ms 350
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 500
+        curve "ease-out-expo"
+    }
+
+    window-movement {
+        duration-ms 350
+        curve "ease-out-expo"
+    }
+
+    window-resize {
+        duration-ms 350
+        curve "ease-out-expo"
+    }
+
+    config-notification-open-close {
+        duration-ms 350
+        curve "ease-out-expo"
+    }
+
+    exit-confirmation-open-close {
+        duration-ms 350
+        curve "ease-out-expo"
+    }
+}

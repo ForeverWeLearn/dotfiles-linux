@@ -124,7 +124,7 @@ binds {
     // Screenshot =====================================================================================================
     Ctrl+Print                          { screenshot show-pointer=false; }                  // Screenshot manual crop
     Print                               { screenshot-screen show-pointer=false; }           // Screenshot entire screen
-    Alt+Print                           { screenshot-window; }                              // Screenshot focused window
+    Mod+Print                           { screenshot-window; }                              // Screenshot focused window
 
 
     // XF86 ===========================================================================================================
