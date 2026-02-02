@@ -7,7 +7,7 @@ show_hidden = false
 
 [preview]
 wrap = "yes"
-max_width = 3000
-max_height = 3000
-image_quality = 75
 image_delay = 0
+image_quality = 65
+max_width = 3840
+max_height = 2160
