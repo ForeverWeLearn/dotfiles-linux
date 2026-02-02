@@ -1,0 +1,53 @@
+layout {
+    background-color "#111111"
+
+    empty-workspace-above-first
+
+    center-focused-column "never"
+    default-column-display "tabbed"
+    default-column-width { proportion 0.5; }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66666
+    }
+
+    gaps 16
+
+    struts {
+        left 8
+        right 8
+        top 5
+        bottom 5
+    }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        on
+        width 3
+        active-color "#cba6f7"
+        inactive-color "#585b70"
+    }
+
+    shadow {
+        off
+    }
+
+    insert-hint {
+        off
+    }
+
+    tab-indicator {
+        hide-when-single-tab
+        corner-radius 4
+        width 4
+        position "top"
+        length total-proportion=0.95
+        gap 3
+        gaps-between-tabs 3
+    }
+}

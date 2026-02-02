@@ -20,9 +20,8 @@
 !lazygit/config.yml
 !micro/colorschemes/*.micro
 !micro/settings.json
-!niri/config.kdl
-!niri/keybinds.kdl
-!niri/animations.kdl
+!niri/**/*.kdl
+niri/noctalia.kdl
 !noctalia/templates/*
 !noctalia/settings.json
 !noctalia/user-templates.toml

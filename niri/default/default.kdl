@@ -1,0 +1,60 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+overview {
+    zoom 0.5
+    backdrop-color "#151515"
+}
+
+recent-windows {
+    off
+}
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 500
+    xcursor-theme "Vimix-cursors"
+    xcursor-size 32
+}
+
+input {
+    focus-follows-mouse max-scroll-amount="0%"
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    keyboard {
+        numlock
+    }
+}
+
+output "eDP-1" {
+    mode "3840x2160@60"
+    scale 2
+}
+
+environment {
+    VISUAL "nvim"
+    EDITOR "nvim"
+
+    DISPLAY ":1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
