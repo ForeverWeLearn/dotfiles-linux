@@ -23,7 +23,25 @@ desc = "Switch or create tab 2"
 
 
 [[mgr.prepend_keymap]]
-on = "T"
+on = "3"
+run = "plugin smart-switch 2"
+desc = "Switch or create tab 3"
+
+
+[[mgr.prepend_keymap]]
+on = "4"
+run = "plugin smart-switch 3"
+desc = "Switch or create tab 4"
+
+
+[[mgr.prepend_keymap]]
+on = "5"
+run = "plugin smart-switch 4"
+desc = "Switch or create tab 5"
+
+
+[[mgr.prepend_keymap]]
+on = "p"
 run = "plugin toggle-pane min-preview"
 desc = "Toggle preview pane"
 
