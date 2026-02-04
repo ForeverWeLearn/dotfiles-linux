@@ -16,13 +16,13 @@
 !fcitx5/profile
 !fish/config.fish
 !fontconfig/fonts.conf
+!hypr/hyprlock.conf
 !kitty/kitty.conf
 !lazygit/config.yml
 !micro/colorschemes/*.micro
 !micro/settings.json
 !niri/**/*.kdl
 niri/noctalia.kdl
-!noctalia/templates/*
 !noctalia/settings.json
 !noctalia/user-templates.toml
 !nvim/lua/**/*
