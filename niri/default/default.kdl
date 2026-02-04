@@ -7,7 +7,7 @@ hotkey-overlay {
 
 overview {
     zoom 0.5
-    backdrop-color "#151515"
+    backdrop-color "#000000"
 }
 
 recent-windows {

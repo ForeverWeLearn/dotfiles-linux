@@ -18,17 +18,28 @@ binds {
 
 
     // Shell actions ==================================================================================================
-    Mod+Space                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }              // App Launcher
-    Mod+I                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }              // Settings
-    Mod+A                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }         // Control Center
-    Mod+N                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }  // Notification Panel
-    Mod+V                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }           // Clipboard History
-    Mod+Slash                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }               // Emoji Picker
-    Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }          // Network Panel
-    Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }          // Battery Panel
-    Mod+Shift+Q                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }           // Session Menu
-    Mod+P                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }              // Lock Screen
-    Mod+S                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }            // Night Light
+    Mod+Space                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }                  // App Launcher
+    Mod+I                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }                  // Settings
+    Mod+A                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }             // Control Center
+    Mod+N                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }      // Notification Panel
+    Mod+V                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }               // Clipboard History
+    Mod+Slash                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }                   // Emoji Picker
+    Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }              // Network Panel
+    Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }              // Battery Panel
+    Mod+Shift+Q                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }               // Session Menu
+    //Mod+P                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }                  // Lock Screen
+    Mod+P                               repeat=false { spawn "hyprlock"; }                  // Lock Screen
+    Mod+S                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }                // Night Light
+    Mod+Shift+Slash                     repeat=false { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; } // Night Light
+
+
+    // Theme & Wallpaper ==============================================================================================
+    Mod+Alt+0                           repeat=false { spawn "animation.py" "None"; }                   // No animation
+    Mod+Alt+1                           repeat=false { spawn "animation.py" "Normal"; }                 // Default animation
+    Mod+Alt+2                           repeat=false { spawn "animation.py" "Paper"; }                  // Flash animation
+    Mod+Alt+3                           repeat=false { spawn "animation.py" "Underwater"; }             // Slowness animation
+    Mod+Alt+4                           repeat=false { spawn "animation.py" "Cinematic"; }              // Cinematic animation
+    Mod+Alt+5                           repeat=false { spawn "animation.py" "Spring"; }                 // Spring animation
 
 
     // Theme & Wallpaper ==============================================================================================
