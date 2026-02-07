@@ -13,13 +13,13 @@ layout {
         proportion 0.66666
     }
 
-    gaps 16
+    gaps 12
 
     struts {
         left 8
         right 8
-        top 5
-        bottom 5
+        top 8
+        bottom 8
     }
 
     focus-ring {

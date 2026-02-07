@@ -9,7 +9,7 @@ binds {
     Mod+Escape                          repeat=false { spawn-sh "kitty --class btop -e btop"; }         // System Monitor
     Mod+Return                          repeat=false { spawn "kitty"; }                                 // Terminal
     Mod+G                               repeat=false { spawn "zen-browser"; }                           // Primary Browser
-    Mod+Shift+G                         repeat=false { spawn "chromium"; }                              // Secondary Browser
+    Mod+Shift+G                         repeat=false { spawn "google-chrome-stable"; }                              // Secondary Browser
     Mod+D                               repeat=false { spawn "vesktop"; }                               // Discord
     Mod+C                               repeat=false { spawn "code"; }                                  // Code Editor
     Mod+Shift+C                         repeat=false { spawn-sh "kitty --class nvim -e nvim"; }         // Terminal Code Editor
