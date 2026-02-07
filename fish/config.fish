@@ -1,10 +1,8 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+alias cls="clear"
+alias sude="sudo -E"
 
 starship init fish | source
 zoxide init fish | source
-
-alias cls="clear"
-alias sudoe="sudo -E"
 
 function fish_greeting
     fastfetch
