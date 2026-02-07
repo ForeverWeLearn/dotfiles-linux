@@ -1,36 +1,41 @@
-import configparser
-from io import StringIO
-import json5
-import os
+#!/usr/bin/python
 import argparse
+import configparser
+import os
+import subprocess
+from io import StringIO
+from pathlib import Path
 
-VSCODE_SETTINGS_PATH = os.path.expanduser("~/.config/Code/User/settings.json")
-BTOP_SETTINGS_PATH = os.path.expanduser("~/.config/btop/btop.conf")
+import json5
+
+THEME_CATPPUCCIN = "Catppuccin"
+THEME_GRUVBOX = "Gruvbox"
+THEME_DRACULA = "Dracula"
+THEME_NORD = "Nord"
+THEMES = [THEME_CATPPUCCIN, THEME_GRUVBOX, THEME_DRACULA, THEME_NORD]
+
+VSCODE_SETTINGS_PATH = Path("~/.config/Code/User/settings.json").expanduser()
+BTOP_SETTINGS_PATH = Path("~/.config/btop/btop.conf").expanduser()
 
 VSCODE_THEME_MAP = {
-    "Catppuccin": "Catppuccin Mocha",
-    "Gruvbox": "Gruvbox Dark Medium",
-    "Dracula": "Dracula Refined",
-    "Nord": "Nord",
-    "Everforest": "Everforest Pro Dark",
-    "Rose Pine": "Rosé Pine Moon",
-    "Tokyo Night": "Tokyo Night Storm",
-    "Monochrome": "Monochrome Dark",
+    THEME_CATPPUCCIN: "Catppuccin Mocha",
+    THEME_GRUVBOX: "Gruvbox Dark Medium",
+    THEME_DRACULA: "Dracula Refined",
+    THEME_NORD: "Nord",
 }
 
 BTOP_THEME_MAP = {
-    "Catppuccin": "catppuccin_macchiato",
-    "Gruvbox": "gruvbox_material_dark",
-    "Dracula": "dracula",
-    "Nord": "nord",
-    "Everforest": "everforest-dark-medium",
-    "Rose Pine": "TTY",
-    "Tokyo Night": "tokyo-night",
-    "Monochrome": "greyscale",
+    THEME_CATPPUCCIN: "catppuccin_macchiato",
+    THEME_GRUVBOX: "gruvbox_material_dark",
+    THEME_DRACULA: "dracula",
+    THEME_NORD: "nord",
 }
 
+WALLPAPER_BASE_DIR = Path("~/Pictures/Wallpapers").expanduser()
+WALLPAPER_TARGET_LINK = WALLPAPER_BASE_DIR / "Current"
 
-def update_vscode_theme(theme_key):
+
+def update_vscode_theme(theme_key: str):
     target_theme = VSCODE_THEME_MAP[theme_key]
     try:
         with open(VSCODE_SETTINGS_PATH, "r") as f:
@@ -48,7 +53,7 @@ def update_vscode_theme(theme_key):
         print(f"[ERROR] VSCode update failed: {e}")
 
 
-def update_btop_theme(theme_key):
+def update_btop_theme(theme_key: str):
     target_theme = f'"{BTOP_THEME_MAP[theme_key]}"'
     if not os.path.exists(BTOP_SETTINGS_PATH):
         print(f"[ERROR] btop config not found at {BTOP_SETTINGS_PATH}")
@@ -81,18 +86,37 @@ def update_btop_theme(theme_key):
         print(f"[ERROR] btop update failed: {e}")
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Switch VSCode and Btop themes.")
-    parser.add_argument(
-        "theme", nargs="+", help=f"Available: {', '.join(VSCODE_THEME_MAP.keys())}"
+def update_color_themes(theme_key: str):
+    subprocess.run(
+        f'qs -c noctalia-shell ipc call colorScheme set "{theme_key}"', shell=True
     )
+    update_vscode_theme(theme_key)
+    update_btop_theme(theme_key)
+
+
+def update_wallpaper(theme_key: str):
+    wallpaper_dir = WALLPAPER_BASE_DIR / theme_key
+    if not os.path.exists(wallpaper_dir):
+        print(
+            f"[WARN] Directory {wallpaper_dir} does not exist. Keep current wallpaper folder."
+        )
+    else:
+        subprocess.run(
+            f'ln -srfn "{wallpaper_dir}" "{WALLPAPER_TARGET_LINK}"', shell=True
+        )
+        subprocess.run("wallpaper.sh")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Set full desktop theme.")
+    parser.add_argument("theme", nargs="+", help=f"Available: {', '.join(THEMES)}")
 
     args = parser.parse_args()
     theme_key = " ".join(args.theme)
 
-    if theme_key in VSCODE_THEME_MAP:
-        update_vscode_theme(theme_key)
-        update_btop_theme(theme_key)
+    if theme_key in THEMES:
+        update_color_themes(theme_key)
+        update_wallpaper(theme_key)
     else:
         print(f"[ERROR] '{theme_key}' not found in theme maps.")
         parser.print_help()
