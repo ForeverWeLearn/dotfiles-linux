@@ -4,23 +4,15 @@
 
 !**/.gitignore
 
-!applications/*.desktop
-!bat/themes/*.tmTheme
-!bat/config
+!/README.md
+!assets/imgs/*
+
 !btop/themes/*.theme
 !btop/btop.conf
-!cava/config
 !fastfetch/config.jsonc
-!fcitx5/conf/classicui.conf
-!fcitx5/config
-!fcitx5/profile
 !fish/config.fish
-!fontconfig/fonts.conf
 !hypr/hyprlock.conf
 !kitty/kitty.conf
-!lazygit/config.yml
-!micro/colorschemes/*.micro
-!micro/settings.json
 !niri/**/*.kdl
 niri/noctalia.kdl
 !noctalia/settings.json
@@ -29,13 +21,11 @@ niri/noctalia.kdl
 !nvim/lazyvim.json
 !nvim/init.lua
 !nvim/stylua.toml
-!nwg-look/config
 !qimgv/qimgv.conf
 !scripts/**/*
-!vesktop/settings/*
+!vesktop/settings/quickCss.css
 !vesktop/themes/*.css
 !vlc/*
-!xdg-desktop-portal/portals.conf
 !xdg-desktop-portal-termfilechooser/config
 !yazi/plugins/**/*
 !yazi/*

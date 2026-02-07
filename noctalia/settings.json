@@ -37,12 +37,13 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 1,
-        "barType": "simple",
+        "barType": "framed",
+        "capsuleColorKey": "none",
         "capsuleOpacity": 0.5,
         "density": "spacious",
         "displayMode": "always_visible",
         "floating": false,
-        "frameRadius": 12,
+        "frameRadius": 16,
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 12,
@@ -56,7 +57,7 @@
         ],
         "showCapsule": false,
         "showOutline": false,
-        "useSeparateOpacity": true,
+        "useSeparateOpacity": false,
         "widgets": {
             "center": [
                 {
@@ -82,19 +83,30 @@
             ],
             "left": [
                 {
+                    "clockColor": "none",
                     "customFont": "JetBrains Mono ExtraBold",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd dd MMM yyyy",
-                    "useCustomFont": true,
-                    "usePrimaryColor": false
+                    "useCustomFont": true
                 }
             ],
             "right": [
                 {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "hideInactive": false,
+                        "inactiveColor": "none",
+                        "removeMargins": false
+                    },
+                    "id": "plugin:privacy-indicator"
+                },
+                {
                     "displayMode": "onhover",
-                    "id": "Network"
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
                 }
             ]
         }
@@ -215,6 +227,8 @@
         "autoStartAuth": false,
         "avatarImage": "/home/fowel/Pictures/Personal/catppuccin.png",
         "boxRadiusRatio": 1,
+        "clockFormat": "hh\\nmm",
+        "clockStyle": "custom",
         "compactLockScreen": true,
         "dimmerOpacity": 0,
         "enableLockScreenCountdown": true,
@@ -281,6 +295,7 @@
     "notifications": {
         "backgroundOpacity": 1,
         "criticalUrgencyDuration": 15,
+        "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMediaToast": false,
         "enabled": true,
@@ -324,6 +339,9 @@
             "eDP-1"
         ],
         "overlayLayer": true
+    },
+    "plugins": {
+        "autoUpdate": false
     },
     "sessionMenu": {
         "countdownDuration": 10000,
@@ -372,8 +390,10 @@
         "showHeader": false,
         "showNumberLabels": true
     },
-    "settingsVersion": 47,
+    "settingsVersion": 49,
     "systemMonitor": {
+        "batteryCriticalThreshold": 5,
+        "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 1000,
         "cpuWarningThreshold": 80,
@@ -413,10 +433,6 @@
             {
                 "enabled": true,
                 "id": "yazi"
-            },
-            {
-                "enabled": true,
-                "id": "cava"
             }
         ],
         "enableUserTheming": true

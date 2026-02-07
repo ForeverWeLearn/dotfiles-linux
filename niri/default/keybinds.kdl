@@ -1,6 +1,7 @@
 binds {
     // General ========================================================================================================
     Mod+Delete                          repeat=false { quit; }                  // Quit Niri session
+    Mod+P                               repeat=false { spawn "hyprlock"; }      // Lock Screen
     Mod+Q                               repeat=false { close-window; }          // Close window
     Mod+Grave                           repeat=false { toggle-overview; }       // Toggle overview
 
@@ -27,19 +28,16 @@ binds {
     Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }              // Network Panel
     Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }              // Battery Panel
     Mod+Shift+Q                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }               // Session Menu
-    //Mod+P                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }                  // Lock Screen
-    Mod+P                               repeat=false { spawn "hyprlock"; }                  // Lock Screen
     Mod+S                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }                // Night Light
     Mod+Shift+Slash                     repeat=false { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; } // Night Light
 
 
-    // Theme & Wallpaper ==============================================================================================
-    Mod+Alt+0                           repeat=false { spawn "animation.py" "None"; }                   // No animation
-    Mod+Alt+1                           repeat=false { spawn "animation.py" "Normal"; }                 // Default animation
-    Mod+Alt+2                           repeat=false { spawn "animation.py" "Paper"; }                  // Flash animation
-    Mod+Alt+3                           repeat=false { spawn "animation.py" "Underwater"; }             // Slowness animation
-    Mod+Alt+4                           repeat=false { spawn "animation.py" "Cinematic"; }              // Cinematic animation
-    Mod+Alt+5                           repeat=false { spawn "animation.py" "Spring"; }                 // Spring animation
+    // Animations =====================================================================================================
+    Mod+Alt+0                           repeat=false { spawn "anime.py" "Default"; }                    // Default animation
+    Mod+Alt+1                           repeat=false { spawn "anime.py" "Paper"; }                      // Flash animation
+    Mod+Alt+2                           repeat=false { spawn "anime.py" "Cinematic"; }                  // Cinematic animation
+    Mod+Alt+3                           repeat=false { spawn "anime.py" "Spring"; }                     // Spring animation
+    Mod+Alt+4                           repeat=false { spawn "anime.py" "Underwater"; }                 // Slowness animation
 
 
     // Theme & Wallpaper ==============================================================================================
@@ -48,11 +46,6 @@ binds {
     Ctrl+Shift+2                        repeat=false { spawn "theme.sh" "Gruvbox"; }                    // Theme Gruvbox
     Ctrl+Shift+3                        repeat=false { spawn "theme.sh" "Dracula"; }                    // Theme Dracula
     Ctrl+Shift+4                        repeat=false { spawn "theme.sh" "Nord"; }                       // Theme Nord
-    Ctrl+Shift+5                        repeat=false { spawn "theme.sh" "Everforest"; }                 // Theme Everforest
-    Ctrl+Shift+6                        repeat=false { spawn "theme.sh" "Rose Pine"; }                  // Theme Rose Pine
-    Ctrl+Shift+7                        repeat=false { spawn "theme.sh" "Tokyo Night"; }                // Theme Tokyo Night
-    Ctrl+Shift+8                        repeat=false { spawn "theme.sh" "Monochrome"; }                 // Theme Monochrome
-    Ctrl+Shift+9                        repeat=false { spawn "theme.sh" "Random"; }                     // Random theme
 
 
     // Focus window ===================================================================================================
