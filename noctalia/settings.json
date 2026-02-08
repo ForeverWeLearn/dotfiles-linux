@@ -90,23 +90,36 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd dd MMM yyyy",
                     "useCustomFont": true
+                },
+                {
+                    "compactMode": false,
+                    "compactShowAlbumArt": true,
+                    "compactShowVisualizer": false,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 145,
+                    "panelShowAlbumArt": true,
+                    "panelShowVisualizer": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": false,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "linear"
                 }
             ],
             "right": [
-                {
-                    "defaultSettings": {
-                        "activeColor": "primary",
-                        "hideInactive": false,
-                        "inactiveColor": "none",
-                        "removeMargins": false
-                    },
-                    "id": "plugin:privacy-indicator"
-                },
                 {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Network",
                     "textColor": "none"
+                },
+                {
+                    "id": "plugin:catwalk"
                 }
             ]
         }
@@ -346,45 +359,51 @@
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": false,
-        "largeButtonsLayout": "grid",
-        "largeButtonsStyle": false,
+        "largeButtonsLayout": "single-row",
+        "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
             {
                 "action": "shutdown",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true
+                "enabled": true,
+                "keybind": ""
             },
             {
                 "action": "reboot",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true
-            },
-            {
-                "action": "suspend",
-                "command": "",
-                "countdownEnabled": true,
-                "enabled": true
+                "enabled": true,
+                "keybind": ""
             },
             {
                 "action": "logout",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "lock",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true
+                "enabled": false,
+                "keybind": ""
+            },
+            {
+                "action": "suspend",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "hibernate",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": false
+                "enabled": false,
+                "keybind": ""
             }
         ],
         "showHeader": false,
@@ -397,7 +416,7 @@
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 1000,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#f38ba8",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -418,7 +437,7 @@
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#94e2d5"
     },
     "templates": {
         "activeTemplates": [
@@ -454,7 +473,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/fowel/Pictures/Wallpapers",
+        "directory": "/home/fowel/Pictures/Wallpapers/Current",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
