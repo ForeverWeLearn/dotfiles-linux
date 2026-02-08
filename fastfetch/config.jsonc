@@ -152,14 +152,14 @@
       "type": "uptime",
       "keyIcon": ""
     },
-    {
-      "type": "packages",
-      "keyIcon": "󰏖",
-      "disabled": [
-        "apk"
-      ],
-      "combined": false
-    },
+    // {
+    //   "type": "packages",
+    //   "keyIcon": "󰏖",
+    //   "disabled": [
+    //     "apk"
+    //   ],
+    //   "combined": false
+    // },
     {
       "type": "shell",
       "keyIcon": ""
