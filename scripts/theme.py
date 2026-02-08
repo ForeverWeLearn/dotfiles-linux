@@ -10,9 +10,8 @@ import json5
 
 THEME_CATPPUCCIN = "Catppuccin"
 THEME_GRUVBOX = "Gruvbox"
-THEME_DRACULA = "Dracula"
-THEME_NORD = "Nord"
-THEMES = [THEME_CATPPUCCIN, THEME_GRUVBOX, THEME_DRACULA, THEME_NORD]
+THEME_EVERFOREST = "Everforest"
+THEMES = [THEME_CATPPUCCIN, THEME_GRUVBOX, THEME_EVERFOREST]
 
 VSCODE_SETTINGS_PATH = Path("~/.config/Code/User/settings.json").expanduser()
 BTOP_SETTINGS_PATH = Path("~/.config/btop/btop.conf").expanduser()
@@ -20,15 +19,13 @@ BTOP_SETTINGS_PATH = Path("~/.config/btop/btop.conf").expanduser()
 VSCODE_THEME_MAP = {
     THEME_CATPPUCCIN: "Catppuccin Mocha",
     THEME_GRUVBOX: "Gruvbox Dark Medium",
-    THEME_DRACULA: "Dracula Refined",
-    THEME_NORD: "Nord",
+    THEME_EVERFOREST: "Everforest Pro Dark Vibrant",
 }
 
 BTOP_THEME_MAP = {
     THEME_CATPPUCCIN: "catppuccin_macchiato",
     THEME_GRUVBOX: "gruvbox_material_dark",
-    THEME_DRACULA: "dracula",
-    THEME_NORD: "nord",
+    THEME_EVERFOREST: "everforest-dark-medium",
 }
 
 WALLPAPER_BASE_DIR = Path("~/Pictures/Wallpapers").expanduser()
