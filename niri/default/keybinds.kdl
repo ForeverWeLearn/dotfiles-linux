@@ -25,10 +25,12 @@ binds {
     Mod+N                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }      // Notification Panel
     Mod+V                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }               // Clipboard History
     Mod+Slash                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }                   // Emoji Picker
-    Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }              // Network Panel
+    Mod+Shift+W                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }              // Network Panel
     Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }              // Battery Panel
+    Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }                     // Media Panel
+    Mod+Shift+B                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call bluetooth togglePanel"; }            // Bluetooth Panel
     Mod+Shift+Q                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }               // Session Menu
-    Mod+S                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }                // Night Light
+    Mod+Shift+N                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }                // Night Light
     Mod+Shift+Slash                     repeat=false { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; } // Night Light
 
 
@@ -42,10 +44,9 @@ binds {
 
     // Theme & Wallpaper ==============================================================================================
     Ctrl+Shift+0                        repeat=false { spawn "wallpaper.sh"; }                          // Random wallpaper
-    Ctrl+Shift+1                        repeat=false { spawn "theme.sh" "Catppuccin"; }                 // Theme Catppuccin
-    Ctrl+Shift+2                        repeat=false { spawn "theme.sh" "Gruvbox"; }                    // Theme Gruvbox
-    Ctrl+Shift+3                        repeat=false { spawn "theme.sh" "Dracula"; }                    // Theme Dracula
-    Ctrl+Shift+4                        repeat=false { spawn "theme.sh" "Nord"; }                       // Theme Nord
+    Ctrl+Shift+1                        repeat=false { spawn "theme.py" "Catppuccin"; }                 // Theme Catppuccin
+    Ctrl+Shift+2                        repeat=false { spawn "theme.py" "Gruvbox"; }                    // Theme Gruvbox
+    Ctrl+Shift+3                        repeat=false { spawn "theme.py" "Everforest"; }                 // Theme Everforest
 
 
     // Focus window ===================================================================================================
@@ -53,6 +54,10 @@ binds {
     Mod+L                               repeat=false { focus-column-right-or-first; }                   // Focus window right
     Mod+K                               repeat=false { focus-workspace-up; }                            // Focus workspace up
     Mod+J                               repeat=false { focus-workspace-down; }                          // Focus workspace down
+    Mod+Left                            repeat=false { focus-column-left-or-last; }                     // Focus window left
+    Mod+Right                           repeat=false { focus-column-right-or-first; }                   // Focus window right
+    Mod+Up                              repeat=false { focus-workspace-up; }                            // Focus workspace up
+    Mod+Down                            repeat=false { focus-workspace-down; }                          // Focus workspace down
     Alt+Tab                             repeat=false { focus-window-down-or-top; }                      // Cycle focus window in stack
 
 
@@ -101,10 +106,18 @@ binds {
     Mod+Shift+L                         repeat=false { move-column-right; }                 // Move window right
     Mod+Shift+K                         repeat=false { move-column-to-workspace-up; }       // Move window up
     Mod+Shift+J                         repeat=false { move-column-to-workspace-down; }     // Move window down
+    Mod+Shift+Left                      repeat=false { move-column-left; }                  // Move window left
+    Mod+Shift+Right                     repeat=false { move-column-right; }                 // Move window right
+    Mod+Shift+Up                        repeat=false { move-column-to-workspace-up; }       // Move window up
+    Mod+Shift+Down                      repeat=false { move-column-to-workspace-down; }     // Move window down
     Mod+Ctrl+H                          { move-column-left; }                               // Move floating window left
     Mod+Ctrl+L                          { move-column-right; }                              // Move floating window left
     Mod+Ctrl+K                          { move-window-up; }                                 // Move floating window up
     Mod+Ctrl+J                          { move-window-down; }                               // Move floating window right
+    Mod+Ctrl+Left                       { move-column-left; }                               // Move floating window left
+    Mod+Ctrl+Right                      { move-column-right; }                              // Move floating window left
+    Mod+Ctrl+Up                         { move-window-up; }                                 // Move floating window up
+    Mod+Ctrl+Down                       { move-window-down; }                               // Move floating window right
 
 
     // Stack window ===================================================================================================
@@ -124,26 +137,26 @@ binds {
 
 
     // Screenshot =====================================================================================================
-    Ctrl+Print                          { screenshot show-pointer=false; }                  // Screenshot manual crop
-    Print                               { screenshot-screen show-pointer=false; }           // Screenshot entire screen
-    Mod+Print                           { screenshot-window; }                              // Screenshot focused window
+    Mod+S                               { screenshot-screen show-pointer=false; }           // Screenshot screen
+    Mod+Shift+S                         { screenshot-window; }                              // Screenshot window
+    Mod+Ctrl+S                          { screenshot show-pointer=false; }                  // Screenshot crop
 
 
     // XF86 ===========================================================================================================
     XF86Calculator                      { spawn "gnome-calculator"; }
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
-    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-    XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-    XF86AudioPlay                       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioPause                      allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioPrev                       allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext                       allow-when-locked=true { spawn-sh "playerctl next"; }
-    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +5%"; }
-    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 5%-"; }
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
 
     // Custom control =================================================================================================
-    Mod+Prior                           allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +5%"; }  // PgUp increase brightness
-    Mod+Next                            allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 5%-"; }  // PgDn decrease brightness
+    Mod+Prior                           allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }  // PgUp increase brightness
+    Mod+Next                            allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }  // PgDn decrease brightness
 }
