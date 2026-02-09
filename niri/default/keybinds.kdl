@@ -29,6 +29,7 @@ binds {
     Mod+B                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }              // Battery Panel
     Mod+M                               repeat=false { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }                     // Media Panel
     Mod+Slash                           repeat=false { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }                   // Emoji Picker
+    Mod+Shift+Slash                     repeat=false { spawn-sh "qs -c noctalia-shell ipc call plugin:kaomoji toggle"; }                   // Emoji Picker
     Mod+Shift+T                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call calendar toggle"; }                  // Calendar Panel
     Mod+Shift+W                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }              // Network Panel
     Mod+Shift+B                         repeat=false { spawn-sh "qs -c noctalia-shell ipc call bluetooth togglePanel"; }            // Bluetooth Panel
