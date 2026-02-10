@@ -87,3 +87,11 @@ window-rule {
     match app-id="be.alexandervanhee.gradia"
     open-maximized true
 }
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    focus-ring { off; }
+    border { off; }
+    shadow { off; }
+}

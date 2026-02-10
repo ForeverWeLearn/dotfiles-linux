@@ -12,6 +12,8 @@
 !fastfetch/config.jsonc
 !fish/config.fish
 !hypr/hyprlock.conf
+!kando/config.json
+!kando/menus.json
 !kitty/kitty.conf
 !niri/**/*.kdl
 niri/noctalia.kdl

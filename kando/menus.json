@@ -1,0 +1,149 @@
+{
+  "version": "2.2.0",
+  "menus": [
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Menu",
+        "icon": "radio_button_unchecked",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Submenu",
+            "icon": "arrow_right",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "theme.py Catppuccin",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Catppuccin",
+                "icon": "timer_1",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "theme.py Gruvbox",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Gruvbox",
+                "icon": "timer_2",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "theme.py Everforest",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Everforest",
+                "icon": "timer_3",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Submenu",
+            "icon": "arrow_left",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "anime.py Default",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Default",
+                "icon": "circle",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "anime.py Underwater",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Underwater",
+                "icon": "airwave",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "anime.py Cinematic",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Cinematic",
+                "icon": "timer_3",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "anime.py Spring",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Spring",
+                "icon": "timer_2",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "anime.py Paper",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Paper",
+                "icon": "timer_1",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 270
+          }
+        ]
+      },
+      "shortcut": "",
+      "shortcutID": "menu",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": true,
+      "tags": [
+        "favs"
+      ],
+      "conditions": {}
+    }
+  ],
+  "collections": [
+    {
+      "name": "Favorites",
+      "icon": "favorite",
+      "iconTheme": "material-symbols-rounded",
+      "tags": [
+        "favs"
+      ]
+    }
+  ]
+}
