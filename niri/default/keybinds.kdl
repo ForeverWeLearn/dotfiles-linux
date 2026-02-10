@@ -1,10 +1,10 @@
 binds {
     // General ========================================================================================================
-    Mod+Delete                          repeat=false { quit; }                                          // Quit Niri session
-    Mod+P                               repeat=false { spawn "hyprlock"; }                              // Lock Screen
-    Mod+Q                               repeat=false { close-window; }                                  // Close window
-    Mod+Grave                           repeat=false { toggle-overview; }                               // Toggle overview
-    Mod+A                               repeat=false { spawn "kando" "--trigger" "menu"; }              // Toggle circular menu
+    Mod+Delete                          repeat=false { quit; }                  // Quit Niri session
+    Mod+P                               repeat=false { spawn "hyprlock"; }      // Lock Screen
+    Mod+Q                               repeat=false { close-window; }          // Close window
+    Mod+Grave                           repeat=false { toggle-overview; }       // Toggle overview
+
 
     // Apps ===========================================================================================================
     Mod+Escape                          repeat=false { spawn-sh "kitty --class btop -e btop"; }         // System Monitor
