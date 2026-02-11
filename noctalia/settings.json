@@ -116,6 +116,15 @@
             "right": [
                 {
                     "defaultSettings": {
+                        "currentIconName": "world-download",
+                        "hideOnZero": false,
+                        "updateIntervalMinutes": 30,
+                        "updateTerminalCommand": "foot -e"
+                    },
+                    "id": "plugin:update-count"
+                },
+                {
+                    "defaultSettings": {
                         "activeColor": "primary",
                         "hideInactive": false,
                         "inactiveColor": "none",
@@ -493,9 +502,9 @@
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
-        "fontDefault": "Fira Sans",
+        "fontDefault": "JetBrains Mono Medium",
         "fontDefaultScale": 1,
-        "fontFixed": "JetBrainsMono NF",
+        "fontFixed": "JetBrains Mono Medium",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
         "panelBackgroundOpacity": 1,
