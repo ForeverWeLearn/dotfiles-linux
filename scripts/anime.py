@@ -31,8 +31,8 @@ NAME_MAP = {
 def send_toast(anime: str):
     data = json.dumps(
         {
-            "title": "Niri",
-            "body": f"Animation {anime}",
+            "title": "Animation",
+            "body": f"{anime}",
         }
     )
     subprocess.run(f"qs -c noctalia-shell ipc call toast send '{data}'", shell=True)

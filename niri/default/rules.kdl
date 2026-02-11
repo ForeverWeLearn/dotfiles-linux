@@ -15,7 +15,7 @@ window-rule {
 
 window-rule {
     match app-id="yazi"
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.666; }
 }
 
 window-rule {
@@ -35,15 +35,6 @@ window-rule {
 window-rule {
     match app-id="kitty"
     default-column-width { proportion 0.333; }
-}
-
-window-rule {
-    match app-id="luckycard"
-    open-floating true
-    min-width 346
-    max-width 346
-    min-height 534
-    max-height 534
 }
 
 window-rule {
@@ -75,7 +66,7 @@ window-rule {
 
 window-rule {
     match app-id="obsidian"
-    default-column-width { proportion 0.75; }
+    open-maximized true
 }
 
 window-rule {

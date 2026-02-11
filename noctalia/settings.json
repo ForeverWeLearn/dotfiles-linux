@@ -6,12 +6,14 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
+        "density": "comfortable",
         "enableClipPreview": false,
         "enableClipboardHistory": true,
         "enableSettingsSearch": false,
         "enableWindowsSearch": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
+        "overviewLayer": false,
         "pinnedApps": [
         ],
         "position": "bottom_center",
@@ -112,6 +114,15 @@
                 }
             ],
             "right": [
+                {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "hideInactive": false,
+                        "inactiveColor": "none",
+                        "removeMargins": false
+                    },
+                    "id": "plugin:privacy-indicator"
+                },
                 {
                     "displayMode": "onhover",
                     "iconColor": "none",
@@ -214,7 +225,7 @@
     "dock": {
         "animationSpeed": 1,
         "backgroundOpacity": 1,
-        "colorizeIcons": false,
+        "colorizeIcons": true,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "enabled": true,
@@ -227,7 +238,7 @@
         ],
         "pinnedStatic": false,
         "position": "right",
-        "size": 1.3
+        "size": 1.5
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
@@ -245,9 +256,34 @@
         "enableShadows": true,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 0.65,
+        "keybinds": {
+            "keyDown": [
+                "Down"
+            ],
+            "keyEnter": [
+                "Return"
+            ],
+            "keyEscape": [
+                "Esc"
+            ],
+            "keyLeft": [
+                "Left"
+            ],
+            "keyRight": [
+                "Right"
+            ],
+            "keyUp": [
+                "Up"
+            ]
+        },
         "language": "en",
         "lockOnSuspend": true,
+        "lockScreenAnimations": false,
+        "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
+        "lockScreenMonitors": [
+        ],
+        "lockScreenTint": 0,
         "radiusRatio": 0.65,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -296,7 +332,7 @@
     "nightLight": {
         "autoSchedule": false,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
@@ -351,7 +387,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false
+        "autoUpdate": true
     },
     "sessionMenu": {
         "countdownDuration": 10000,
@@ -406,7 +442,7 @@
         "showHeader": false,
         "showNumberLabels": true
     },
-    "settingsVersion": 49,
+    "settingsVersion": 51,
     "systemMonitor": {
         "batteryCriticalThreshold": 5,
         "batteryWarningThreshold": 20,
@@ -478,7 +514,9 @@
         "hideWallpaperFilenames": true,
         "monitorDirectories": [
         ],
+        "overviewBlur": 0.4,
         "overviewEnabled": false,
+        "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 1800,
         "setWallpaperOnAllMonitors": true,
@@ -490,7 +528,7 @@
         "transitionType": "disc",
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

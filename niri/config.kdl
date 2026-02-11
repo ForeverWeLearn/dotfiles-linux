@@ -3,10 +3,175 @@ spawn-sh-at-startup "fcitx5 -d"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "/usr/lib/xdg-desktop-portal-termfilechooser -r"
 
+binds {
+    // #"General"
+    Mod+Shift+Slash     hotkey-overlay-title="Keybind Cheatsheet"   { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
+    Mod+Grave           hotkey-overlay-title="Toggle overview"      { toggle-overview; }
+    Mod+Q               hotkey-overlay-title="Close window"         { close-window; }
+    Mod+P               hotkey-overlay-title="Lock screen"          { spawn "hyprlock"; }
+    Mod+Delete          hotkey-overlay-title="Quit Niri"            { quit; }
+
+
+    // #"Apps"
+    Mod+Escape          hotkey-overlay-title="Btop"                 { spawn-sh "kitty --class btop -e btop"; }
+    Mod+Return          hotkey-overlay-title="Kitty"                { spawn "kitty"; }
+    Mod+G               hotkey-overlay-title="Zen Browser"          { spawn "zen-browser"; }
+    Mod+Shift+G         hotkey-overlay-title="Chrome"               { spawn "google-chrome-stable"; }
+    Mod+D               hotkey-overlay-title="Vesktop"              { spawn "vesktop"; }
+    Mod+C               hotkey-overlay-title="Code"                 { spawn "code"; }
+    Mod+Shift+C         hotkey-overlay-title="Neovim"               { spawn-sh "kitty --class nvim -e nvim"; }
+    Mod+E               hotkey-overlay-title="Nautilus"             { spawn "nautilus"; }
+    Mod+Shift+E         hotkey-overlay-title="Nautilus as root"     { spawn-sh "nautilus admin:///"; }
+    Mod+Y               hotkey-overlay-title="Yazi"                 { spawn-sh "kitty --class yazi -e yazi"; }
+    Mod+Shift+Y         hotkey-overlay-title="Yazi as root"         { spawn-sh "kitty --class yazi -e sudo -E yazi"; }
+
+
+    // #"Noctalia"
+    Mod+Space           hotkey-overlay-title="Launcher"         { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+I               hotkey-overlay-title="Settings"             { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+N               hotkey-overlay-title="Notification"         { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+V               hotkey-overlay-title="Clipboard"            { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+B               hotkey-overlay-title="Battery"              { spawn-sh "qs -c noctalia-shell ipc call battery togglePanel"; }
+    Mod+M               hotkey-overlay-title="Media"                { spawn-sh "qs -c noctalia-shell ipc call media toggle"; }
+    Mod+Slash           hotkey-overlay-title="Emoji"                { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
+    Mod+Shift+T         hotkey-overlay-title="Todo"                 { spawn-sh "qs -c noctalia-shell ipc call plugin:todo togglePanel"; }
+    Mod+Shift+W         hotkey-overlay-title="Network"              { spawn-sh "qs -c noctalia-shell ipc call network togglePanel"; }
+    Mod+Shift+B         hotkey-overlay-title="Bluetooth"            { spawn-sh "qs -c noctalia-shell ipc call bluetooth togglePanel"; }
+    Mod+Shift+Q         hotkey-overlay-title="Session Menu"         { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Shift+N         hotkey-overlay-title="Night Light"          { spawn-sh "qs -c noctalia-shell ipc call nightLight toggle"; }
+
+
+    // #"Animation"
+    Mod+Alt+0           hotkey-overlay-title="Default"              { spawn "anime.py" "Default"; }
+    Mod+Alt+1           hotkey-overlay-title="Flash"                { spawn "anime.py" "Paper"; }
+    Mod+Alt+2           hotkey-overlay-title="Cinematic"            { spawn "anime.py" "Cinematic"; }
+    Mod+Alt+3           hotkey-overlay-title="Spring"               { spawn "anime.py" "Spring"; }
+    Mod+Alt+4           hotkey-overlay-title="Underwater"           { spawn "anime.py" "Underwater"; }
+
+
+    // #"Theme & Wallpaper"
+    Ctrl+Shift+0        hotkey-overlay-title="Random Wallpaper"             { spawn "wallpaper.sh"; }
+    Ctrl+Shift+1        hotkey-overlay-title="Theme Catppuccin"             { spawn "theme.py" "Catppuccin"; }
+    Ctrl+Shift+2        hotkey-overlay-title="Theme Gruvbox"                { spawn "theme.py" "Gruvbox"; }
+    Ctrl+Shift+3        hotkey-overlay-title="Theme Everforest"             { spawn "theme.py" "Everforest"; }
+
+
+    // #"Focus"
+    Mod+H               hotkey-overlay-title="Focus window left"            { focus-column-left-or-last; }
+    Mod+L               hotkey-overlay-title="Focus window right"           { focus-column-right-or-first; }
+    Mod+K               hotkey-overlay-title="Focus window up"              { focus-workspace-up; }
+    Mod+J               hotkey-overlay-title="Focus window down"            { focus-workspace-down; }
+    Mod+Left            hotkey-overlay-title="Focus window left"            { focus-column-left-or-last; }
+    Mod+Right           hotkey-overlay-title="Focus window right"           { focus-column-right-or-first; }
+    Mod+Up              hotkey-overlay-title="Focus window up"              { focus-workspace-up; }
+    Mod+Down            hotkey-overlay-title="Focus window down"            { focus-workspace-down; }
+
+
+    // #"Layout"
+    Mod+T               hotkey-overlay-title="Toggle floating"              { toggle-window-floating; }
+    Mod+Tab             hotkey-overlay-title="Cycle focus layout"           { switch-focus-between-floating-and-tiling; }
+
+
+    // #"Workspace"
+    Mod+0                       hotkey-overlay-title="Focus workspace 0"                { focus-workspace 1; }
+    Mod+1                       hotkey-overlay-title="Focus workspace 1"                { focus-workspace 2; }
+    Mod+2                       hotkey-overlay-title="Focus workspace 2"                { focus-workspace 3; }
+    Mod+3                       hotkey-overlay-title="Focus workspace 3"                { focus-workspace 4; }
+    Mod+4                       hotkey-overlay-title="Focus workspace 4"                { focus-workspace 5; }
+    Mod+5                       hotkey-overlay-title="Focus workspace 5"                { focus-workspace 6; }
+    Mod+6                       hotkey-overlay-title="Focus workspace 6"                { focus-workspace 7; }
+    Mod+7                       hotkey-overlay-title="Focus workspace 7"                { focus-workspace 8; }
+    Mod+8                       hotkey-overlay-title="Focus workspace 8"                { focus-workspace 9; }
+    Mod+9                       hotkey-overlay-title="Focus workspace 9"                { focus-workspace 10; }
+    Mod+Shift+0                 hotkey-overlay-title="Move window to workspace 0"       { move-column-to-workspace 1; }
+    Mod+Shift+1                 hotkey-overlay-title="Move window to workspace 1"       { move-column-to-workspace 2; }
+    Mod+Shift+2                 hotkey-overlay-title="Move window to workspace 2"       { move-column-to-workspace 3; }
+    Mod+Shift+3                 hotkey-overlay-title="Move window to workspace 3"       { move-column-to-workspace 4; }
+    Mod+Shift+4                 hotkey-overlay-title="Move window to workspace 4"       { move-column-to-workspace 5; }
+    Mod+Shift+5                 hotkey-overlay-title="Move window to workspace 5"       { move-column-to-workspace 6; }
+    Mod+Shift+6                 hotkey-overlay-title="Move window to workspace 6"       { move-column-to-workspace 7; }
+    Mod+Shift+7                 hotkey-overlay-title="Move window to workspace 7"       { move-column-to-workspace 8; }
+    Mod+Shift+8                 hotkey-overlay-title="Move window to workspace 8"       { move-column-to-workspace 9; }
+    Mod+Shift+9                 hotkey-overlay-title="Move window to workspace 9"       { move-column-to-workspace 10; }
+    Mod+Alt+K                   hotkey-overlay-title="Move workspace up"                { move-workspace-up; }
+    Mod+Alt+J                   hotkey-overlay-title="Move workspace down"              { move-workspace-down; }
+
+
+    // #"Resize window"
+    F11                         hotkey-overlay-title="Fullscreen"        { fullscreen-window; }
+    Mod+F                       hotkey-overlay-title="Maximize"          { maximize-column; }
+    Mod+R                       hotkey-overlay-title="Cycle width"       { switch-preset-column-width; }
+    Mod+Minus                   hotkey-overlay-title="Decrease width"    { set-column-width "-5%"; }
+    Mod+Equal                   hotkey-overlay-title="Increase width"    { set-column-width "+5%"; }
+    Mod+Shift+Minus             hotkey-overlay-title="Decrease height"   { set-window-height "-5%"; }
+    Mod+Shift+Equal             hotkey-overlay-title="Increase height"   { set-window-height "+5%"; }
+
+
+    // #"Move window"
+    Mod+Shift+H                 hotkey-overlay-title="Move left"         { move-column-left; }
+    Mod+Shift+L                 hotkey-overlay-title="Move right"        { move-column-right; }
+    Mod+Shift+K                 hotkey-overlay-title="Move up"           { move-column-to-workspace-up; }
+    Mod+Shift+J                 hotkey-overlay-title="Move down"         { move-column-to-workspace-down; }
+    Mod+Shift+Left              hotkey-overlay-title="Move left"         { move-column-left; }
+    Mod+Shift+Right             hotkey-overlay-title="Move right"        { move-column-right; }
+    Mod+Shift+Up                hotkey-overlay-title="Move up"           { move-column-to-workspace-up; }
+    Mod+Shift+Down              hotkey-overlay-title="Move down"         { move-column-to-workspace-down; }
+    Mod+Ctrl+H                  hotkey-overlay-title="Move left"         { move-column-left; }
+    Mod+Ctrl+L                  hotkey-overlay-title="Move right"        { move-column-right; }
+    Mod+Ctrl+K                  hotkey-overlay-title="Move up"           { move-window-up; }
+    Mod+Ctrl+J                  hotkey-overlay-title="Move down"         { move-window-down; }
+    Mod+Ctrl+Left               hotkey-overlay-title="Move left"         { move-column-left; }
+    Mod+Ctrl+Right              hotkey-overlay-title="Move right"        { move-column-right; }
+    Mod+Ctrl+Up                 hotkey-overlay-title="Move up"           { move-window-up; }
+    Mod+Ctrl+Down               hotkey-overlay-title="Move down"         { move-window-down; }
+
+
+    // #"Stack"
+    Alt+Tab                     hotkey-overlay-title="Cycle stack"              { focus-window-down-or-top; }
+    Mod+Z                       hotkey-overlay-title="Toggle stack display"     { toggle-column-tabbed-display; }
+    Mod+BracketLeft             hotkey-overlay-title="Join window left"         { consume-or-expel-window-left; }
+    Mod+BracketRight            hotkey-overlay-title="Join window right"        { consume-or-expel-window-right; }
+    Mod+Comma                   hotkey-overlay-title="Consume window"           { consume-window-into-column; }
+    Mod+Period                  hotkey-overlay-title="Expel window"             { expel-window-from-column; }
+
+
+    // #"Mouse"
+    Mod+WheelScrollUp           hotkey-overlay-title="Focus workspace up"       cooldown-ms=150 { focus-workspace-up; }
+    Mod+WheelScrollDown         hotkey-overlay-title="Focus workspace down"     cooldown-ms=150 { focus-workspace-down; }
+    Mod+Ctrl+WheelScrollUp      hotkey-overlay-title="Move window up"           cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollDown    hotkey-overlay-title="Move window down"         cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Shift+WheelScrollUp     hotkey-overlay-title="Focus column left"        cooldown-ms=75 { focus-column-left; }
+    Mod+Shift+WheelScrollDown   hotkey-overlay-title="Focus column right"       cooldown-ms=75 { focus-column-right; }
+
+
+    // #"Screenshot"
+    Mod+S                       hotkey-overlay-title="Screen screenshot"        { screenshot-screen show-pointer=false; }
+    Mod+Shift+S                 hotkey-overlay-title="Window screenshot"        { screenshot-window; }
+    Mod+Ctrl+S                  hotkey-overlay-title="Manual screenshot"        { screenshot show-pointer=false; }
+
+
+    // #"XF86"
+    XF86Calculator              hotkey-overlay-title=null       { spawn "gnome-calculator"; }
+    XF86AudioRaiseVolume        hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume        hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute               hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute            hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioPlay               hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPause              hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPrev               hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AudioNext               hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    XF86MonBrightnessUp         hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown       hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
+
+    // #"Custom"
+    Mod+Prior       hotkey-overlay-title="Increase brightness"      { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    Mod+Next        hotkey-overlay-title="Decrease brightness"      { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+}
+
 include "./default/default.kdl"
 include "./default/layout.kdl"
 include "./default/rules.kdl"
-include "./default/keybinds.kdl"
 include "./default/animations.kdl"
 
 include "./custom/stationary-wallpaper.kdl"
