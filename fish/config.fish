@@ -1,3 +1,5 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
 alias cls="clear"
 alias sude="sudo -E"
 
