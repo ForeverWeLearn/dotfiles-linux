@@ -6,7 +6,7 @@ spawn-sh-at-startup "/usr/lib/xdg-desktop-portal-termfilechooser -r"
 binds {
     // #"General"
     Mod+Shift+Slash     hotkey-overlay-title="Keybind Cheatsheet"   { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
-    Mod+Grave           hotkey-overlay-title="Toggle overview"      { toggle-overview; }
+    Mod+Tab             hotkey-overlay-title="Toggle overview"      { toggle-overview; }
     Mod+Q               hotkey-overlay-title="Close window"         { close-window; }
     Mod+P               hotkey-overlay-title="Lock screen"          { spawn "hyprlock"; }
     Mod+Delete          hotkey-overlay-title="Quit Niri"            { quit; }
@@ -69,7 +69,7 @@ binds {
 
     // #"Layout"
     Mod+T               hotkey-overlay-title="Toggle floating"              { toggle-window-floating; }
-    Mod+Tab             hotkey-overlay-title="Cycle focus layout"           { switch-focus-between-floating-and-tiling; }
+    Mod+U               hotkey-overlay-title="Cycle focus layout"           { switch-focus-between-floating-and-tiling; }
 
 
     // #"Workspace"
@@ -98,39 +98,40 @@ binds {
 
 
     // #"Resize window"
-    F11                         hotkey-overlay-title="Fullscreen"        { fullscreen-window; }
-    Mod+F                       hotkey-overlay-title="Maximize"          { maximize-column; }
-    Mod+R                       hotkey-overlay-title="Cycle width"       { switch-preset-column-width; }
-    Mod+Minus                   hotkey-overlay-title="Decrease width"    { set-column-width "-5%"; }
-    Mod+Equal                   hotkey-overlay-title="Increase width"    { set-column-width "+5%"; }
-    Mod+Shift+Minus             hotkey-overlay-title="Decrease height"   { set-window-height "-5%"; }
-    Mod+Shift+Equal             hotkey-overlay-title="Increase height"   { set-window-height "+5%"; }
+    F11                         hotkey-overlay-title="Fullscreen"           { fullscreen-window; }
+    Mod+F                       hotkey-overlay-title="Maximize"             { maximize-column; }
+    Mod+Shift+F                 hotkey-overlay-title="Expand width"         { expand-column-to-available-width; }
+    Mod+R                       hotkey-overlay-title="Cycle width"          { switch-preset-column-width; }
+    Mod+Minus                   hotkey-overlay-title="Decrease width"       { set-column-width "-5%"; }
+    Mod+Equal                   hotkey-overlay-title="Increase width"       { set-column-width "+5%"; }
+    Mod+Shift+Minus             hotkey-overlay-title="Decrease height"      { set-window-height "-5%"; }
+    Mod+Shift+Equal             hotkey-overlay-title="Increase height"      { set-window-height "+5%"; }
 
 
     // #"Move window"
-    Mod+Shift+H                 hotkey-overlay-title="Move left"         { move-column-left; }
-    Mod+Shift+L                 hotkey-overlay-title="Move right"        { move-column-right; }
-    Mod+Shift+K                 hotkey-overlay-title="Move up"           { move-column-to-workspace-up; }
-    Mod+Shift+J                 hotkey-overlay-title="Move down"         { move-column-to-workspace-down; }
-    Mod+Shift+Left              hotkey-overlay-title="Move left"         { move-column-left; }
-    Mod+Shift+Right             hotkey-overlay-title="Move right"        { move-column-right; }
-    Mod+Shift+Up                hotkey-overlay-title="Move up"           { move-column-to-workspace-up; }
-    Mod+Shift+Down              hotkey-overlay-title="Move down"         { move-column-to-workspace-down; }
-    Mod+Ctrl+H                  hotkey-overlay-title="Move left"         { move-column-left; }
-    Mod+Ctrl+L                  hotkey-overlay-title="Move right"        { move-column-right; }
-    Mod+Ctrl+K                  hotkey-overlay-title="Move up"           { move-window-up; }
-    Mod+Ctrl+J                  hotkey-overlay-title="Move down"         { move-window-down; }
-    Mod+Ctrl+Left               hotkey-overlay-title="Move left"         { move-column-left; }
-    Mod+Ctrl+Right              hotkey-overlay-title="Move right"        { move-column-right; }
-    Mod+Ctrl+Up                 hotkey-overlay-title="Move up"           { move-window-up; }
-    Mod+Ctrl+Down               hotkey-overlay-title="Move down"         { move-window-down; }
+    Mod+Shift+H                 hotkey-overlay-title="Move left"            { move-column-left; }
+    Mod+Shift+L                 hotkey-overlay-title="Move right"           { move-column-right; }
+    Mod+Shift+K                 hotkey-overlay-title="Move up"              { move-column-to-workspace-up; }
+    Mod+Shift+J                 hotkey-overlay-title="Move down"            { move-column-to-workspace-down; }
+    Mod+Shift+Left              hotkey-overlay-title="Move left"            { move-column-left; }
+    Mod+Shift+Right             hotkey-overlay-title="Move right"           { move-column-right; }
+    Mod+Shift+Up                hotkey-overlay-title="Move up"              { move-column-to-workspace-up; }
+    Mod+Shift+Down              hotkey-overlay-title="Move down"            { move-column-to-workspace-down; }
+    Mod+Ctrl+H                  hotkey-overlay-title="Move left"            { move-column-left; }
+    Mod+Ctrl+L                  hotkey-overlay-title="Move right"           { move-column-right; }
+    Mod+Ctrl+K                  hotkey-overlay-title="Move up"              { move-window-up; }
+    Mod+Ctrl+J                  hotkey-overlay-title="Move down"            { move-window-down; }
+    Mod+Ctrl+Left               hotkey-overlay-title="Move left"            { move-column-left; }
+    Mod+Ctrl+Right              hotkey-overlay-title="Move right"           { move-column-right; }
+    Mod+Ctrl+Up                 hotkey-overlay-title="Move up"              { move-window-up; }
+    Mod+Ctrl+Down               hotkey-overlay-title="Move down"            { move-window-down; }
 
 
     // #"Stack"
     Alt+Tab                     hotkey-overlay-title="Cycle stack"              { focus-window-down-or-top; }
-    Mod+Z                       hotkey-overlay-title="Toggle stack display"     { toggle-column-tabbed-display; }
-    Mod+BracketLeft             hotkey-overlay-title="Join window left"         { consume-or-expel-window-left; }
-    Mod+BracketRight            hotkey-overlay-title="Join window right"        { consume-or-expel-window-right; }
+    Mod+Z                       hotkey-overlay-title="Toggle stack mode"        { toggle-column-tabbed-display; }
+    Mod+BracketLeft             hotkey-overlay-title="Stack to left"            { consume-or-expel-window-left; }
+    Mod+BracketRight            hotkey-overlay-title="Stack to right"           { consume-or-expel-window-right; }
     Mod+Comma                   hotkey-overlay-title="Consume window"           { consume-window-into-column; }
     Mod+Period                  hotkey-overlay-title="Expel window"             { expel-window-from-column; }
 
