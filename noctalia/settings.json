@@ -9,6 +9,7 @@
         "density": "comfortable",
         "enableClipPreview": false,
         "enableClipboardHistory": true,
+        "enableSessionSearch": true,
         "enableSettingsSearch": false,
         "enableWindowsSearch": false,
         "iconMode": "tabler",
@@ -39,7 +40,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 1,
-        "barType": "framed",
+        "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.5,
         "density": "spacious",
@@ -410,48 +411,47 @@
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "1"
             },
             {
                 "action": "reboot",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": ""
+                "keybind": "2"
+            },
+            {
+                "action": "suspend",
+                "command": "",
+                "countdownEnabled": true,
+                "enabled": true,
+                "keybind": "3"
             },
             {
                 "action": "logout",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": false,
-                "keybind": ""
+                "keybind": "4"
             },
             {
                 "action": "lock",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": false,
-                "keybind": ""
-            },
-            {
-                "action": "suspend",
-                "command": "",
-                "countdownEnabled": true,
-                "enabled": false,
-                "keybind": ""
+                "keybind": "5"
             },
             {
                 "action": "hibernate",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": false,
-                "keybind": ""
+                "keybind": "6"
             }
         ],
-        "showHeader": false,
-        "showNumberLabels": true
+        "showHeader": false
     },
-    "settingsVersion": 51,
+    "settingsVersion": 53,
     "systemMonitor": {
         "batteryCriticalThreshold": 5,
         "batteryWarningThreshold": 20,
@@ -494,6 +494,10 @@
             {
                 "enabled": true,
                 "id": "yazi"
+            },
+            {
+                "enabled": true,
+                "id": "ghostty"
             }
         ],
         "enableUserTheming": true
@@ -518,6 +522,8 @@
         "directory": "/home/fowel/Pictures/Wallpapers/Current",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
+        "favorites": [
+        ],
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
@@ -530,6 +536,7 @@
         "randomIntervalSec": 1800,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
+        "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
         "sortOrder": "name",
         "transitionDuration": 2500,
