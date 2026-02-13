@@ -28,7 +28,9 @@
 
 ### Others
 - Password Manager: `bitwarden`
-- Fonts: `ttf-jetbrains-mono`, `ttf-jetbrains-mono-nerd`
+- Fonts: `ttf-jetbrains-mono` `ttf-jetbrains-mono-nerd`
 - Full Icon Theme: `kora-icon-theme`
 - Mouse Cursor: `vimix-cursors`
-- Input Method Framework: `fxitx5`, `fcitx5-configtool`, `fcitx5-unikey`, `catppuccin-fcitx5-git`
+- Input: `fcitx5` `fcitx5-configtool` `fcitx5-unikey` `catppuccin-fcitx5-git`
+- `chaotic-aur`: Prebuild AUR packages
+- `gnome-tweaks`: GUI for some tweaks
