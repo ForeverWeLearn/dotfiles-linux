@@ -7,7 +7,7 @@ starship init fish | source
 zoxide init fish | source
 
 function fish_greeting
-    fastfetch
+    catnap
 end
 
 function y
