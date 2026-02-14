@@ -2,7 +2,7 @@
 ratio = [3, 8, 9]
 sort_by = "extension"
 linemode = "size"
-show_hidden = false
+show_hidden = true
 
 
 [preview]
