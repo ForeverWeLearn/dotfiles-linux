@@ -1,6 +1,6 @@
 layer-rule {
-    match namespace="^noctalia-overview*"
-    opacity 0.0
+  match namespace="^noctalia-overview*"
+  opacity 0.0
 }
 
 layer-rule {

@@ -27,7 +27,7 @@ binds {
 
 
     // #"Noctalia"
-    Mod+Space           hotkey-overlay-title="Launcher"         { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Space           hotkey-overlay-title="Launcher"             { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+I               hotkey-overlay-title="Settings"             { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+N               hotkey-overlay-title="Notification"         { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+V               hotkey-overlay-title="Clipboard"            { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
@@ -166,17 +166,17 @@ binds {
 
 
     // #"Custom"
-    Mod+Prior       hotkey-overlay-title="Increase brightness"      { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    Mod+Next        hotkey-overlay-title="Decrease brightness"      { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    Mod+Prior       hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    Mod+Next        hotkey-overlay-title=null       { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 }
 
-include "./default/default.kdl"
-include "./default/layout.kdl"
-include "./default/rules.kdl"
-include "./default/animations.kdl"
+include "./base/base.kdl"
+include "./base/layout.kdl"
+include "./base/rules.kdl"
+include "./base/animations.kdl"
+include "./base/stationary-wallpaper.kdl"
 
-include "./custom/stationary-wallpaper.kdl"
-include "./custom/animations.kdl"
+include "./overwrite/animations.kdl"
 
 include "./noctalia.kdl"
 
